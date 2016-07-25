@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ExpressApp2", "ExpressApp2\ExpressApp2.njsproj", "{F61A2F36-5DAB-47AD-88AA-DFCD1A0295DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F61A2F36-5DAB-47AD-88AA-DFCD1A0295DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61A2F36-5DAB-47AD-88AA-DFCD1A0295DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61A2F36-5DAB-47AD-88AA-DFCD1A0295DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61A2F36-5DAB-47AD-88AA-DFCD1A0295DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

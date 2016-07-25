@@ -1,0 +1,99 @@
+extends layout
+
+block content
+    h1 = 输入管理员信息
+    form(name="formzhishou",method="post")                                
+        p 指数种类
+        p 
+            textarea(name="zhishuname",cols="30",rows="1")
+        p 指数指标
+            input(type="text",name="zhishuzhibiao")
+        p 指数日期
+            input(type="text",name="zhishuriqi")
+        p 
+            input(type="submit",value="提交")
+     form(name="formgupiao",method="post")
+        p 股票名称
+        p
+            textarea(name="gupiaoname",cols="30",rows="1")
+        p 股票代码
+        p
+            textarea(name="gupiaodaima",cols="30",rows="1")
+        p 股票行业
+            textarea(name="gupiaohangye",cols="30",rows="1")
+        p 股价
+            input(type="text",name="gujia")
+        p 时间
+            input(type="text",name="gupiaoshijian")
+        p 成交量
+            input(type="text",name="chengjiaoliang")
+        p 成交额
+            input(type="text",name="chengjiaoe")
+        p 52周高
+            input(type="text",name="hpass")
+        p 52周低
+            input(type="text",name="lpass")
+        p 涨跌额
+            input(type="text",name="updown")
+        p 涨跌幅
+            input(type="text",name="updownrate")
+        p 可交易量
+            input(type="text",name="jiaoyiliang")
+        p 
+            input(type="submit",value="提交")
+    form(name="formlishi",method="post")
+        p 时间
+            input(type="text",name="charushijian")
+        p 历史时间
+            input(type="text",name="lishitime")
+        p 历史数值
+            input(type="text",name="lishishuzhi")
+        p 历史事件
+        p
+            textarea(name="lishishijian",cols="30",rows="1")
+        p 
+            input(type="submit",value="提交")
+    form(name="formdongtai",method="post")
+        p 作者
+        p
+            textarea(name="author",cols="30",rows="1")
+        p 种类
+        p
+            textarea(name="kind",cols="30",rows="1")
+        p 股票
+        p
+            textarea(name="duiyinggupiao",cols="30",rows="1")
+        p 图片来源
+        p
+            textarea(name="imgsrc",cols="30",rows="2")
+        p 动态标题
+        p
+            textarea(name="biaoti",cols="30",rows="2")
+        p 动态内容
+        p
+            textarea(name="dongtaineirong",cols="30",rows="10")
+        p 
+            input(type="submit",value="提交")
+    form(name="formcaibao",method="post")
+        p 种类
+            input(type="text",name="zhongleishezhi")
+        p 营业额
+            input(type="text",name="yingyee")
+        p 股票名
+        p
+            textarea(name="guming",cols="30",rows="1")
+        p 公司名
+        p
+            textarea(name="gongsi",cols="30",rows="1")
+        p 纳税额
+            input(type="text",name="nashui")
+        p 股东欲注资
+            input(type="text",name="holdwant")
+        p 股东实际注资
+            input(type="text",name="holdin")
+        p 股东欲购日期
+            input(type="text",name="holdwantt",value="2016-06-07")
+        p 股东实购日期
+            input(type="text",name="holdint",value="2016-06-07")
+        p 
+            input(type="submit",value="提交") 

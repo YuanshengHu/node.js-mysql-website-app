@@ -1,0 +1,194 @@
+﻿doctype html
+html
+  head
+    title= title
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/scriptforbiaoqina.js')
+    script(src='/javascripts/indexajax.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/biaoqian.css')
+    link(rel='stylesheet', href='/stylesheets/index.css')
+body(class="ini")
+    h1股票讯息网
+    div(class="div0")
+        div(class="div1")
+            div(class="a0")
+                p 大盘行情
+            div(class="a2")
+                a(href="http://localhost:1337/zhishu/1")(style="text-decoration:none")上证指数
+            div(class="a1")
+                a(href="http://localhost:1337/zhishu/2")(style="text-decoration:none")深证指数
+            div(class="a2")
+                a(href='http://localhost:1337/zhishu/3')(style="text-decoration:none")恒生港股
+            div(class="a1")
+                a(href='http://localhost:1337/zhishu/4')(style="text-decoration:none")纳斯达克
+            div(class="a2")
+                a(href='http://localhost:1337/zhishu/5')(style="text-decoration:none")红筹股指
+            div(class="a1")
+                a(href='http://localhost:1337/zhishu/6')(style="text-decoration:none")国企股指
+            div(class="a2")
+            div(class="a1")
+            div(class="a2")
+        div(class="div1")
+            div(class="a0")
+                p 论坛
+            div(class="a1")
+                a(href='http://localhost:1337/pinglun/1')(style="text-decoration:none")论坛1
+            div(class="a2")
+                a(href='http://localhost:1337/pinglun/2')(style="text-decoration:none")论坛2
+            div(class="a1")
+                a(href='http://localhost:1337/pinglun/3')(style="text-decoration:none")论坛3
+            div(class="a2")
+                a(href='http://localhost:1337/pinglun/4')(style="text-decoration:none")论坛4
+            div(class="a1")
+                a(href='http://localhost:1337/pinglun/5')(style="text-decoration:none")论坛5
+            div(class="a2")
+                a(href='http://localhost:1337/pinglun/6')(style="text-decoration:none")论坛6
+            div(class="a1")
+                a(href='http://localhost:1337/pinglun/7')(style="text-decoration:none")论坛7
+            div(class="a2")
+            div(class="a1")
+        div(class="div1")
+            div(class="a0")
+                p 行业
+            div(class="a2")
+                a(href='http://localhost:1337/hangye/1')(style="text-decoration:none")金融
+            div(class="a1")
+                a(href='http://localhost:1337/hangye/2')(style="text-decoration:none")地产
+            div(class="a2")
+                a(href='http://localhost:1337/hangye/3')(style="text-decoration:none")新能源
+            div(class="a1")
+                a(href='http://localhost:1337/hangye/4')(style="text-decoration:none")电子类
+            div(class="a2")
+                a(href='http://localhost:1337/hangye/5')(style="text-decoration:none")软件
+            div(class="a1")
+                a(href='http://localhost:1337/hangye/6')(style="text-decoration:none")钢铁
+            div(class="a2")
+                a(href='http://localhost:1337/hangye/7')(style="text-decoration:none")电力
+            div(class="a1")
+                a(href='http://localhost:1337/hangye/8')(style="text-decoration:none")其他
+        div(class="div3")
+            form(name="form1",method="post",style="text-align:center")
+                input(id="search",type="text",size="40",value="",name="fuck",class="check",height="60px")
+                input(type="submit",value="搜索股票",height="60px",class="check")
+    div(class="div2")
+        div(id="container")
+            ul(id="tabs", class = "fix")
+                li
+                    a(href="#")涨跌榜
+                li
+                    a(href="#")涨跌幅
+                li
+                    a(href="#")成交量
+                li
+                    a(href="#")成交额
+            div(class="content")
+                div(class="tab")
+                    table
+                        tr
+                            td rate
+                            td stock
+                            td code
+                            td data
+                        - for(j=0;j<zhangdiebangrate.length&&j<6;j++){
+                            tr
+                                td= j+1
+                                td= zhangdiebangrate[j].stockname
+                                td= zhangdiebangrate[j].code
+                                td= zhangdiebangrate[j].updown
+                        - }
+                div(class="tab")
+                    table
+                        tr
+                            td rate
+                            td stock
+                            td code
+                            td data
+                        - for(j=0;j<zhangdiefurate.length&&j<6;j++){
+                            tr
+                                td= j+1
+                                td= zhangdiefurate[j].stockname
+                                td= zhangdiefurate[j].code
+                                td= zhangdiefurate[j].updownrate
+                        - }
+                div(class="tab")
+                    table
+                        tr
+                            td rate
+                            td stock
+                            td code
+                            td data
+                        - for(j=0;j<chengjiaoliangrate.length&&j<6;j++){
+                            tr
+                                td= j+1
+                                td= chengjiaoliangrate[j].stockname
+                                td= chengjiaoliangrate[j].code
+                                td= chengjiaoliangrate[j].chengjiaoliang
+                        - }
+                div(class="tab")
+                    table
+                        tr
+                            td rate
+                            td stock
+                            td code
+                            td data
+                        - for(j=0;j<chengjiaoerate.length&&j<6;j++){
+                            tr
+                                td= j+1
+                                td= chengjiaoerate[j].stockname
+                                td= chengjiaoerate[j].code
+                                td= chengjiaoerate[j].chengjiaoe
+                        - }
+        div(id="container2")
+            ul(id="tabs2", class = "fix2")
+                li
+                    a(href="#")行业平均榜
+                li
+                    a(href="#")股东关注榜
+            div(class="content2")
+                div(class="tab2")
+                    table
+                        tr
+                            td rate
+                            td industry
+                            td data
+                        - for(j=0;j<hangyepingjunrate.length&&j<6;j++){
+                            tr
+                                td= j+1
+                                td= hangyepingjunrate[j].hangye
+                                td= hangyepingjunrate[j].hangyepingjun
+                        - }
+                div(class="tab2")
+                    table
+                        tr
+                            td rate
+                            td industry
+                            td data
+                        - for(j=0;j<gudongguanzhurate.length&&j<6;j++){
+                            tr
+                                td= j+1
+                                td= gudongguanzhurate[j].hangye
+                                td= gudongguanzhurate[j].gudongshu
+                        - }
+    div(id="dongtaibiao",class="div5")
+        - var dt = dongtais
+        - for(i=0;i<dt.length&&i<4;i++){
+            div(class='search')
+                div(class="p1")
+                    img(src="dt[i].img")
+                div(class="p2")
+                    p=  dt[i].name
+                div(class="p3")
+                    p=  dt[i].date             
+        - }
+    div(class="div6",style="text-align:center")
+        input(type="button",id="buttondown",value="更多",class="check",width="30px",height="50px")
+        
+
+
+
+
+
+  
+    
+

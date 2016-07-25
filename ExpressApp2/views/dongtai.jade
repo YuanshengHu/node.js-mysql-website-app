@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/dongtai.css')
+body
+    h1股票讯息网
+    div(class="div0")
+        p= dongtais.name
+        p= dongtais.date
+        p= dongtais.author
+        p= dongtais.content
+    div(class="div2") 
+        - for(j=0;j<pingluns.length;j++){            
+            div(class="div3")
+                div(class="div4")
+                    p= pingluns[j].content
+                div(class="div5")
+                    p= pingluns[j].time
+        - }
+    div(class="div6")
+        form(name="dongtaipinglun",method="post")
+            p 评论的动态明
+                input(type="text",name="updown",value=dongtais.name)
+            p 您的评论
+                textarea(name="biaoti",cols="30",rows="2")
+            p
+                input(type="submit",value="提交")

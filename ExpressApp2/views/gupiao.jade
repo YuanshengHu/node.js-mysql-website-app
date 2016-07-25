@@ -1,0 +1,68 @@
+﻿doctype html
+html
+  head
+    title= title
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/char.js')
+    script(src="/javascripts/jquery.pista.js",type="text/javascript",charset="utf-8")
+    script(src='/javascripts/gupiaoajax.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/gupiao.css')
+    link(rel='stylesheet', href='/stylesheets/charstyle.css')
+body
+    h1股票讯息网
+    div(class="div0")
+        div(id='m',style="text-align:center") 
+            p= xinti1[0].stockname             
+        div(style="text-align:center")  
+            p 涨跌幅
+                input(type="text",value=xinti1[0].updown)
+        div(style="text-align:center") 
+            p 涨跌率
+                input(type="text",value=xinti1[0].updownrate)
+        div(style="text-align:center") 
+            p 股价
+                input(type="text",value=xinti1[0].price)
+        div(style="text-align:center") 
+            p 52周高
+                input(type="text",value=xinti1[0].hpass)
+        div(style="text-align:center") 
+            p 52周低
+                input(type="text",value=xinti1[0].lpass)
+    h2下面K线图
+    div(class="div1") 
+        div(id="basic",class="gr")
+    div(class="div7")
+        - for(i=0;i<caibaos.length;i++){
+            div(class="div8")
+                - if (caibaos[i].kind =='company')
+                    p 公司名
+                        input(type="text",name="updown1",value=caibaos[i].company)
+                    p 营业额
+                        input(type="text",name="updown2",value=caibaos[i].yingyee)
+                    p 纳税
+                        input(type="text",name="updown3",value=caibaos[i].nashui)
+                - else
+                    p 股东名
+                        input(type="text",name="updown4",value=caibaos[i].company)
+                    p 预计注资
+                        input(type="text",name="updown5",value=caibaos[i].holdwant)
+                    p 预计注资时间
+                        input(type="text",name="updown6",value=caibaos[i].holdwantt)
+                    p 实际注资
+                        input(type="text",name="updown7",value=caibaos[i].holdin)
+                    p 实际注资时间
+                        input(type="text",name="updown8",value=caibaos[i].holdint)
+        - } 
+    div(class="div2") 
+        - for(j=0;j<dongtais.length;j++){            
+            div(class="div3")
+                div(class="div4")
+                    img(src=dongtais[j].img)
+                div(class="div5")
+                    p= dongtais[j].name
+                div(class="div6")
+                    p= dongtais[j].date
+        - }
+    
+        

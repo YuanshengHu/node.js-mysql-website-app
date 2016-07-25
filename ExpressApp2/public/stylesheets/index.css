@@ -1,0 +1,77 @@
+.ini{
+    width:95%;
+}
+.div0{
+	width: 95%;
+}
+.div1{
+	width: 95%;
+    clear:left;
+}
+.div2{
+	width: 30%;
+    float:left;
+    border:1px solid #00F
+}
+.div3{
+    width: 95%;
+    height:60px;
+    background-color: #aff;
+    clear:both;
+    border:1px solid #00F
+}
+.div5{
+    width: 66%;
+    float:left;
+}
+.div6{
+    width: 66%;
+    float:left;
+}
+.a0{
+	width:10%;
+    height:20px;
+    float:left;
+    background-color: #ddd;
+}
+.a1{
+	width:10%;
+	background-color: #ffa;
+    float:left;
+    height:20px;
+}
+.a2 {
+    width: 10%;
+    background-color: #faf;
+    float: left;
+    height: 20px;
+}
+.check{
+    margin: auto;  position: relative;  top: 22px
+}
+.search{
+    width:99%;
+    clear:left;
+}
+.p1{
+    float:left;
+    width:40%;
+    height:70px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+.p2{
+    float:left;
+    width:58%;
+    height:40px;
+    border-top: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+.p3{
+    float:left;
+    width:58%;
+    height:30px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+}

@@ -1,0 +1,23 @@
+﻿doctype html
+html
+  head
+    title= title
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/pinglunajax.js')
+    link(rel='stylesheet', href='/stylesheets/pinglun.css')
+body
+    h1股票讯息网
+    div(class="div2") 
+        - for(j=0;j<xinti1.length;j++){            
+            div(class="div3")
+                div(class="div4")
+                    img(src=xinti1[j].img)
+                div(class="div5")
+                    p= xinti1[j].name
+                div(class="div6")
+                    p= xinti1[j].stock
+                div(class="div7")
+                    p= xinti1[j].author
+                div(class="div8")
+                    p= xinti1[j].date
+        - }

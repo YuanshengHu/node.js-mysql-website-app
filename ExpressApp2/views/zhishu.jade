@@ -1,0 +1,22 @@
+﻿doctype html
+html
+  head
+    title= title
+    script(src='/javascripts/jquery.min.js')
+    script(src='/javascripts/char2.js')
+    script(src="/javascripts/jquery.pista.js",type="text/javascript",charset="utf-8")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/gupiao.css')
+    link(rel='stylesheet', href='/stylesheets/charstyle.css')
+body
+    h1股票讯息网
+    div(class="div0")
+        div(id='m',style="text-align:center") 
+            p= xinti1[0].zhishuname              
+        div(style="text-align:center")  
+            p= xinti1[0].num
+        div(style="text-align:center") 
+            p= xinti1[0].time
+    p下面K线图
+    div(class="div1") 
+        div(id="basic",class="gr")
